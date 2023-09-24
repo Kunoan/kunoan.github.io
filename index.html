@@ -1,0 +1,270 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="widht=device-widht, initial scale=1.0">
+<style>
+.container1 {
+    display: flex;
+    margin: 0px;
+   
+}
+
+.bodi{
+    margin: 3px;
+    text-align: center;
+}
+
+.bulatan{
+    display: flex;
+
+}
+.kepala {
+width: 100%;
+height: fit-content;
+background-color: red;
+align-items: center;
+justify-content: center;
+text-align: center;
+margin: 0px;
+border-radius: 15px;
+padding: 2px;
+}
+.judul1{
+    background-color: white;
+    text-align: center;
+    margin: 0px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    color: red;
+    padding: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    width: 90%;
+}    
+
+.jam{
+    background-color: white;
+    width: 10%;
+    text-align: center;
+    padding: 5px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px
+    
+}
+
+.block1{
+    background-color: gold;
+    border: 5px;
+    width: 30%;
+    height: 50%;        
+    border-radius: 15px;
+
+}
+.block2{
+    background-color:cyan;
+    border: 5px;
+    width: 70%;
+    height: 500px;        
+    border-radius: 15px;
+    margin-left: 10px;
+
+}
+
+.gambar{
+    width: 35%;
+    text-align: center;
+    height: 150PX;
+    border-radius: 75px;
+    padding: 5px;
+}
+.pengertian{
+    width: 65%;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+    font-style: italic;
+    margin: 65px;
+}
+.logo{
+    width: 150px;
+    border-radius: 90px;
+    height: 150px;
+    padding: 2px;
+}
+
+.wadah{
+    background-color: cyan;
+    padding: 3PX;
+    margin: 5px;
+    border-radius: 15px;
+    display: flex;
+    text-align: center;
+}
+
+.tombol{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    margin: 0px;
+    padding: 1px;
+    background-color: white;
+    color: brown;
+    cursor: pointer;
+    height: 20px;
+    border-radius: 15px;
+    border: 1px solid blue;
+
+
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: cyan;
+    color: black;
+    min-width: fit-content;
+    min-height: fit-content;
+    box-shadow: 0px 8px 16px 0px rgba(red, green, blue, alpha);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.bawah{
+    background-color: black;
+    color: white;
+    padding: 5%;
+    border-radius: 15px;
+}
+
+.texttombol{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    margin: 0px;
+    padding: 1px;
+    background-color: white;
+    color: brown;
+    cursor: pointer;
+    height: 20px;
+    border-radius: 15px;
+    border: 1px solid blue;
+
+}
+.groupblock{
+    display: flex;
+    padding: 1px;
+    margin: 5px;
+}
+
+.headpost{
+    background-color:black;
+    color: white;
+    padding: 1px;
+    margin: 1px;
+    border-radius: 15px;
+    height:30px;
+}
+.judulpost{
+    padding: 1px;
+    margin: 1px;
+    text-align: center;
+    text-shadow: 2px solid green;
+}
+
+
+</style>
+
+<script>
+function toggleDropdown() {
+  var dropdownContent = document.querySelector(".dropdown-content");
+  if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+  } else {
+    dropdownContent.style.display = "block";
+  }
+}
+
+function updatejam(){
+    var waktu = new Date();
+    var jam = waktu.getHours();
+    var menit = waktu.getMinutes();
+    var detik = waktu.getSeconds();
+
+    jam = jam < 10 ? "0" + jam : jam;
+    menit = menit < 10 ? "0" + menit : menit;
+    detik = detik < 10 ? "10" + detik : detik;
+
+    var waktuString = jam + ":" + menit + ":" + detik;
+    document.getElementById("jam").innerHTML = waktuString;
+}
+
+setInterval(updatejam, 1000)
+updatejam()
+</script>
+
+</head>
+
+<body class="bodi">
+<header class="kepala">
+<div class="bulatan">
+<h1 class="judul1">Riski Septianto</h1>
+<div class="jam" id="jam"></div>
+</div>
+<div class="container1">
+    <div class="gambar">
+<img src="kikilogo.gif" class="logo" >
+</img>
+</div>
+<hr>
+<p class="pengertian">Jagalah kebersihan karena kebersihan sebagian dari Iman <br> Mau dapat pengalaman yang banyak klik disini </p>
+</div>
+</header>
+<hr>
+
+<div class="wadah">
+<div class="tombol">
+    <span onclick="toggleDropdown()">Pendukung</span>
+    <div class="dropdown-content">
+        <a href="#">Youtube Search</a>
+        <a href="#">Auto Refresh</a>
+        <a href="#">Chat GPT</a>
+    </div>
+</div>
+<div>
+    <a href="Profile.pdf" download class="texttombol">Download CV</a>
+    <a href="" class="texttombol">Hubungi Saya</a>
+</div>
+</div>
+<hr>
+<div class="groupblock">
+<div class="block1">
+    <h3> Berita Sementara</h3>
+
+    <p>
+        Ini merupakan website yang sedang dikelola oleh saya sendiri sih, jadi apa gunanya ?simak penjelasanya berikut ini<br>
+        Jadi Website ini merupakan website yang akan dirancang untuk memeudahkan berbagai macam kerja yang dilakukan secara online<br>
+        Simak penjelasan selengkapnya....
+    </p>
+
+</div>
+<div class="block2">
+    <div class="headpost">
+    <h3 class="judulpost">Postingan</h3>
+    </div>
+</div>
+</div>
+
+    
+
+<footer class="bawah">
+    <marquee direction="left" behavior="scroll" scrollamount="3">Pengetahuan adalah cara bagaimana kita membuat sesuatuu hal terasa berbeda | Didalam hati dan tekad yang kuat ada sosok IBU yang Luar Biasa | Website Static Milik Riski Septianto</marquee>
+    <p> &COPY; Riski Septianto | Buayan, Kebumen 2023</p>
+</footer>
+</body>
+
+
+</html>
