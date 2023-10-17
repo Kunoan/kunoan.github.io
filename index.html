@@ -196,7 +196,7 @@ function updatejam(){
 
     jam = jam < 10 ? "0" + jam : jam;
     menit = menit < 10 ? "0" + menit : menit;
-    detik = detik < 10 ? "10" + detik : detik;
+    detik = detik < 10 ? "0" + detik : detik;
 
     var waktuString = jam + ":" + menit + ":" + detik;
     document.getElementById("jam").innerHTML = waktuString;
